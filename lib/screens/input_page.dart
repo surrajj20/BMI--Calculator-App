@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'icon_content.dart';
-import 'reusable_card.dart';
-import 'constants.dart';
-import 'round_icon_button.dart';
+import '../components/icon_content.dart';
+import '../components/reusable_card.dart';
+import '../constants.dart';
+import '../components/round_icon_button.dart';
 import 'result_page.dart';
+import '../components/bottom_button.dart';
 
 enum Gender { male, female }
 
@@ -133,7 +134,7 @@ class _InputPageState extends State<InputPage> {
                       ),
                       Text(
                         weight.toString(),
-                        style: kLabelTextStyle,
+                        style: kNumberTextStyle,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -175,7 +176,7 @@ class _InputPageState extends State<InputPage> {
                       ),
                       Text(
                         age.toString(),
-                        style: kLabelTextStyle,
+                        style: kNumberTextStyle,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -205,21 +206,16 @@ class _InputPageState extends State<InputPage> {
               ),
             ],
           )),
-          GestureDetector(
+          BottomButton(
+            buttonTitle: 'CALCULATE',
             onTap: () {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ResultPage(),
-                  ));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ResultPage(),
+                ),
+              );
             },
-            child: Container(
-              child: Text('CALCULATE'),
-              color: kBottomContainerColour,
-              margin: EdgeInsets.only(top: 10.0),
-              width: double.infinity,
-              height: kBottomContainerHeight,
-            ),
           )
         ],
       ),

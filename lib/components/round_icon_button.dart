@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RoundIconButton extends StatelessWidget {
-  RoundIconButton({this.icon, this.onPressed});
+  RoundIconButton({@required this.icon, @required this.onPressed});
 
   final IconData icon;
   final Function onPressed;
@@ -10,6 +10,7 @@ class RoundIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return RawMaterialButton(
       child: Icon(icon),
+      elevation: 0.0,
       onPressed: onPressed,
       constraints: BoxConstraints.tightFor(
         width: 56.0,
