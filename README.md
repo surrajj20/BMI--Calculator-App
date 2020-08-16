@@ -11,7 +11,7 @@
 Simple Flutter App Where you can calculate your BMI(Body Mass Index). All process were shown on app demo below:-
 
 ### App Demo:-
-![App Demo](images/app-demo.mp4)
+![App Demo](images/app-demo.gif)
 
 
 ## APK LINK
